@@ -21,3 +21,8 @@ import Repos from './modules/Repos'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+
+// https://github.com/reactjs/react-router-tutorial/tree/master/lessons/04-nested-routes
+// http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu
+// https://github.com/ReactTraining/react-router/tree/master/packages/react-router
+// http://www.cnblogs.com/BestMePeng/p/React_Router.html
