@@ -26,6 +26,7 @@ class App extends Component {
                     <li><Link to="/repos/reactjs/react-router">React Router</Link></li>
                     <li><Link to="/repos/facebook/react">React</Link></li>
                     <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/newslist">NewsList</Link></li>
                 </ul>
             </div>
         );

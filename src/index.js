@@ -8,6 +8,7 @@ import './index.css';
 import About from './modules/About';
 import Repos from './modules/Repos';
 import Home from './modules/Home';
+import NewsList from "./news/js/NewsList";
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -16,6 +17,7 @@ ReactDOM.render((
         <Route path="/about" component={About}/>
         <Route path="/repos/:userName/:repoName" component={Repos}/>
         <Route path="/home" component={Home}/>
+        <Route path="/newslist" component={NewsList}/>
     </Router>
 ), document.getElementById('root'));
 registerServiceWorker();
