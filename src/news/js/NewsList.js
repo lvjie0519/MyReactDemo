@@ -11,8 +11,7 @@ export default class  NewsList extends Component{
     constructor(props){
         super(props);
 
-        this.state = {
-            newsInfos: [
+        this.mNewsInfos = [
                 {
                     id:1,
                     title:'产品经理与程序员矛盾的本质是什么？',
@@ -26,8 +25,9 @@ export default class  NewsList extends Component{
                     voteCount:8,
                     icon: 'http://img.mukewang.com/52da54ed0001ecfa04120172.jpg'
                 }
-            ]
-        }
+            ];
+
+        this.state = {newsInfos:this.mNewsInfos};
     }
 
     render(){
@@ -41,10 +41,26 @@ export default class  NewsList extends Component{
             <div>
                 <Head leftText="返回"
                       centerText="新闻列表"
-                      rightText="刷新"/>
+                      rightText="刷新"
+                      addOnClick={this.addNewsInfo.bind(this)}/>
                 {newsInfos}
             </div>
         );
+    }
+
+    addNewsInfo(){
+        console.log("addNewsInfo...."+this.mNewsInfos);
+        let newsInfo = {
+            id:2,
+            title:'热爱编程是一种怎样的体验？',
+            content:'别人对玩游戏感兴趣，我对写代码、看技术文章感兴趣；把泡github、stackoverflow、v2ex、reddit、csdn当做是兴趣爱好；遇到重复的工作，总想着能不能通过程序实现自动化；喝酒的时候把写代码当下酒菜，边喝边想边敲；不给工资我也会来加班；做梦都在写代码。',
+            voteCount:8,
+            icon: 'http://img.mukewang.com/52da54ed0001ecfa04120172.jpg'
+        };
+
+        // this.mNewsInfos= this.state.newsInfos;
+        this.mNewsInfos.push(newsInfo);
+        this.setState({newsInfos:this.mNewsInfos});
     }
 
 }
