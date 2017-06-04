@@ -1,0 +1,13 @@
+.news-box {
+  width: 100%;
+  height: 200px;
+  padding: 0 200px;
+    position:relative;
+}
+.news-icon {
+    position: absolute ;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 180px;
+}
