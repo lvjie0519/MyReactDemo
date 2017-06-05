@@ -5,6 +5,23 @@ import {Link} from 'react-router';
 
 class App extends Component {
 
+    loadDataFromMock(){
+        // $.ajax({
+        //     url: "",
+        //     dataType: "json",
+        //     success: newsInfos => {
+        //         console.log(newsInfos[0]);
+        //     },
+        //     error: (xhr, status, err) => {
+        //         console.log(err.toString());
+        //     }
+        // });
+    }
+
+    componentDidMount() {
+        this.loadDataFromMock();
+    }
+
     render() {
         return (
             <div className="App">
