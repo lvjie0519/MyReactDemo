@@ -9,6 +9,7 @@ import About from './modules/About';
 import Repos from './modules/Repos';
 import Home from './modules/Home';
 import NewsList from "./news/js/NewsList";
+import NewsInfo from "./news/js/NewsInfo"
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -18,6 +19,7 @@ ReactDOM.render((
         <Route path="/repos/:userName/:repoName" component={Repos}/>
         <Route path="/home" component={Home}/>
         <Route path="/newslist" component={NewsList}/>
+         <Route path="/newsinfo" component={NewsInfo}/>
     </Router>
 ), document.getElementById('root'));
 registerServiceWorker();
@@ -31,3 +33,4 @@ registerServiceWorker();
 // http://www.ruanyifeng.com/blog/2016/05/react_router.html?utm_source=tool.lu
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router
 // http://www.cnblogs.com/BestMePeng/p/React_Router.html
+// https://github.com/piliyu/react-getting-started/blob/master/app.jsx

@@ -10,9 +10,15 @@ import $ from "jquery";
 
 export default class  NewsList extends Component{
 
+    // static contextTypes = { // as static property
+    //     router: React.PropTypes.object
+    // };
+
+
+
+
     constructor(props){
         super(props);
-
 
         this.state = {newsInfos:[], isLoading:true};
     }
@@ -46,8 +52,9 @@ export default class  NewsList extends Component{
 
             var newsInfos = this.state.newsInfos.map(function(newsInfo){
                 return	<NewsListItem
-                    newsInfo={newsInfo} />
-            });
+                    newsInfo={newsInfo}
+                    onItemClick={this.onItemClick.bind(this)}/>
+            }.bind(this));
 
             return(
                 <div>
@@ -95,6 +102,23 @@ export default class  NewsList extends Component{
 
     }
 
+    onItemClick(newsInfo){
+        console.log(newsInfo.news_title);
+        this.context.router.push({
+            pathname: '/newsinfo',
+            state: {
+                newsId:newsInfo.news_title,
+                newsType: newsInfo.news_type,
+                newsTitle:newsInfo.news_title,
+                newsContent:newsInfo.news_content,
+                newsAppraiseCount:newsInfo.news_appraise_count,
+                newsCreateTime:newsInfo.news_create_time
+            },
+        })
+    }
 
+}
 
+NewsList.contextTypes={
+    router: React.PropTypes.object
 }
