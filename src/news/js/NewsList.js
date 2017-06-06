@@ -10,13 +10,6 @@ import $ from "jquery";
 
 export default class  NewsList extends Component{
 
-    // static contextTypes = { // as static property
-    //     router: React.PropTypes.object
-    // };
-
-
-
-
     constructor(props){
         super(props);
 
@@ -84,19 +77,6 @@ export default class  NewsList extends Component{
 
         this.mNewsInfos= this.state.newsInfos;
         this.mNewsInfos.push(newsInfo);
-
-        // $.ajax({
-        //     url: "news.json",
-        //     dataType: 'json',
-        //     type: 'post',
-        //     data: newsInfo,
-        //     success: function (data) {
-        //         console.log(data);
-        //     }.bind(this),
-        //     error: function (xhr, status, err) {
-        //         console.error("url="+this.props.url, status, err.toString());
-        //     }.bind(this)
-        // });
 
         this.setState({newsInfos:this.mNewsInfos});
 
