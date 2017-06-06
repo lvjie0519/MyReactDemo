@@ -9,6 +9,7 @@ import "../css/head.css"
 import $ from "jquery";
 
 import NewsAppraiseListItem from "./component/NewsAppraiseListItem";
+import AddAppraiseInfo from "./component/AddAppraiseInfo";
 
 export default class NewsAppraiseList extends Component{
 
@@ -60,10 +61,25 @@ export default class NewsAppraiseList extends Component{
                           centerText="评价列表"
                           rightText="刷新"/>
                     {newsAppraiseInfos}
-
+                    <AddAppraiseInfo onAddClick={this.addNewsAppraiseInfo.bind(this)}/>
                 </div>
             );
         }
+
+    }
+
+    addNewsAppraiseInfo(appraiseContent){
+        let newsAppraiseInfos = this.state.newsAppraiseInfos;
+        let k = newsAppraiseInfos[0].appraise_id +1;
+        let appraiseInfo = {
+            "appraise_id":k,
+            "news_id": this.newsId,
+            "appraise_author": "lvjie"+k,
+            "appraise_content":appraiseContent,
+            "appraise_time":"2017-05-23"
+        }
+        newsAppraiseInfos.splice(0, 0, appraiseInfo);
+        this.setState({newsAppraiseInfos:newsAppraiseInfos});
 
     }
 
