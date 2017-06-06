@@ -38,7 +38,9 @@ export default class  Head extends Component{
 
     rightClick(e){
         console.log("rightClick...");
-        this.props.addOnClick();
+        if(this.props.addOnClick){
+            this.props.addOnClick();
+        }
     }
 
 }

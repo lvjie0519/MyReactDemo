@@ -87,7 +87,7 @@ export default class  NewsList extends Component{
         this.context.router.push({
             pathname: '/newsinfo',
             state: {
-                newsId:newsInfo.news_title,
+                newsId:newsInfo.news_id,
                 newsType: newsInfo.news_type,
                 newsTitle:newsInfo.news_title,
                 newsContent:newsInfo.news_content,

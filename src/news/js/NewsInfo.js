@@ -43,22 +43,29 @@ export default class NewsInfo extends Component{
                 <p className="'news-content'">{this.newsContent}</p>
                 <div className="container">
                     <button className="left-btn" onClick={(e) => {
-                        this.leftClick(e);
+                        this.publishAppraiseInfo(e);
                     }}>评论数：{this.newsAppraiseCount}</button>
                     <button className="right-btn" onClick={(e) => {
-                        this.rightClick(e);
+                        this.publishAppraiseInfo(e);
                     }}>发布评论</button>
                 </div>
             </div>
         );
     }
 
-    leftClick(e){
-        console.log("");
+
+    publishAppraiseInfo(e){
+        console.log("publishAppraiseInfo...");
+        this.context.router.push({
+            pathname: '/news_appraise_list',
+            query: {
+                newsId:this.newsId,
+            },
+        })
     }
 
-    rightClick(e){
-        console.log("");
-    }
+}
 
+NewsInfo.contextTypes={
+    router: React.PropTypes.object
 }

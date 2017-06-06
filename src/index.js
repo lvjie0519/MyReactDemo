@@ -10,6 +10,7 @@ import Repos from './modules/Repos';
 import Home from './modules/Home';
 import NewsList from "./news/js/NewsList";
 import NewsInfo from "./news/js/NewsInfo"
+import NewsAppraiseList from "./news/js/NewsAppraiseList"
 
 ReactDOM.render((
     <Router history={hashHistory}>
@@ -19,7 +20,8 @@ ReactDOM.render((
         <Route path="/repos/:userName/:repoName" component={Repos}/>
         <Route path="/home" component={Home}/>
         <Route path="/newslist" component={NewsList}/>
-         <Route path="/newsinfo" component={NewsInfo}/>
+        <Route path="/newsinfo" component={NewsInfo}/>
+        <Route path="/news_appraise_list" component={NewsAppraiseList}/>
     </Router>
 ), document.getElementById('root'));
 registerServiceWorker();
