@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/7/29 0029.
  */
 import React, { Component } from 'react'
-import Header from '../component/header'
+import Header from '../component/headerDetail'
 import QuestionListItem from '../component/QuestionListItem'
 import QuestionAnswerListItem from '../component/QuestionAnswerListItem'
 
@@ -35,7 +35,7 @@ export default class QuestionDetail extends Component {
         <Header
           leftText='返回'
           centerText='问题详情'
-          rightText='提问'
+          rightText='我来回答'
           leftClick={this.headerLeftOnClick}
           rightClick={this.headerRightOnClick} />
         <QuestionListItem
@@ -47,13 +47,18 @@ export default class QuestionDetail extends Component {
   }
 
   headerLeftOnClick() {
-
+    console.log('点击返回')
+    this.context.router.goBack()
   }
 
   headerRightOnClick() {
-
+    console.log('我来回答')
   }
 
   onItemClick(questionInfo) {
   }
+}
+
+QuestionDetail.contextTypes = {
+  router: React.PropTypes.object
 }
