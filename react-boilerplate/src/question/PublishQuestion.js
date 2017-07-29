@@ -24,15 +24,16 @@ export default class PublishQuestion extends Component {
     return (
       <div>
         <HeaderDetail centerText='发布问题' rightText='提问' />
-        <form style={{textAlign: 'center', fontSize: 18}}>
+        <form styleName='smart-publish'>
           <div>
-            <p>标题：（50字以内的中文、英文或数字）</p>
+            <span>标题：（50字以内的中文、英文或数字）</span>
             <input id='title' type='text' placeholder='请输入问题标题' onChange={this.handleChange} />
           </div>
-          <div>
-            <p>描述：（200字以内）</p>
+          <div style={{marginTop: 20}}>
+            <span>描述：（200字以内）</span>
             <textarea id='description' name='description' rows='30' placeholder='请输入问题描述' onChange={this.handleChange} />
           </div>
+          <span styleName='btn smart-btn-submit'>提交</span><span styleName='btn'>取消</span>
         </form>
       </div>
     )
