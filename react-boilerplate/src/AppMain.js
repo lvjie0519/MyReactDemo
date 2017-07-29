@@ -9,7 +9,6 @@ export default class AppMain extends Component {
   render() {
     return (
       <div>
-        <h2> hello react </h2>
         <QuestionMain />
       </div>
     )
