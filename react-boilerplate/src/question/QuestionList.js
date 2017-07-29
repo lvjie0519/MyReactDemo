@@ -2,17 +2,54 @@
  * Created by Administrator on 2017/7/29 0029.
  */
 import React, { Component } from 'react'
+import $ from 'jquery'
+import QuestionListItem from './component/QuestionListItem'
 
 export default class QuestionMain extends Component {
-  gotoDetail() {
+  constructor(props) {
+    super(props)
 
+    this.state = {questionInfos: [], isLoading: true}
+    this.onItemClick = this.onItemClick.bind(this)
   }
+
   render() {
-    return (
-      <div>
-        <button onClick={this.gotoDetail}>跳转到详情页</button>
-        <h2> 问题列表界面 </h2>
-      </div>
-    )
+    if (this.state.isLoading) {
+      return (
+        <div>加载中....</div>
+      )
+    } else {
+      var questionInfos = this.state.questionInfos.map(function (questionInfo) {
+        return <QuestionListItem
+          questionInfo={questionInfo}
+          onItemClick={this.onItemClick} />
+      }.bind(this))
+      return (
+        <div>
+          {questionInfos}
+        </div>
+      )
+    }
+  }
+
+  componentDidMount() {
+    this.loadDataFromMock()
+  }
+
+  loadDataFromMock() {
+    $.ajax({
+      url: 'questions.json',
+      dataType: 'json',
+      success: questionInfos => {
+        this.setState({questionInfos: questionInfos, isLoading: false})
+      },
+      error: (xhr, status, err) => {
+        console.log(err.toString())
+      }
+    })
+  }
+
+  onItemClick(questionInfo) {
+    console.log(questionInfo.questionTitle)
   }
 }
