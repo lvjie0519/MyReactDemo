@@ -9,9 +9,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router, Route, hashHistory} from 'react-router'
 import AppMain from './AppMain'
+import PublishQuestion from './question/PublishQuestion'
 
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path='/' component={AppMain} />
+    <Route path='/publish-question' component={PublishQuestion} />
   </Router >
 ), document.getElementById('app'))
