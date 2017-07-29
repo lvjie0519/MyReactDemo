@@ -11,7 +11,9 @@ export default class HeaderDetail extends Component {
     leftText: React.PropTypes.string,
     centerText: React.PropTypes.string,
     rightText: React.PropTypes.string,
-    headerstyle: React.PropTypes.string
+    headerstyle: React.PropTypes.string,
+    leftClick: React.PropTypes.func,
+    rightClick: React.PropTypes.func
   }
 
   static getDefaultProps = {
@@ -22,11 +24,15 @@ export default class HeaderDetail extends Component {
   }
 
   leftClick(e) {
-
+    if (this.props.leftClick != null) {
+      this.props.leftClick()
+    }
   }
 
   rightClick(e) {
-
+    if (this.props.rightClick != null) {
+      this.props.rightClick()
+    }
   }
 
   render() {
