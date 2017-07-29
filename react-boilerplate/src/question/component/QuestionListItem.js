@@ -21,15 +21,26 @@ export default class QuestionListItem extends Component {
       questionAnswerCount: ''
     }
   }
+  constructor(props) {
+    super(props)
+    this.state = {showAll: false}
+  }
 
+  showAll=() => {
+    this.setState({
+      showAll: true
+    })
+  }
   render() {
+    const content = this.props.questionInfo.questionContent
     return (
       <div onClick={(e) => { this.onItemClick(e) }} styleName='questionItem' >
         <h3 styleName='questionTitle' >{this.props.questionInfo.questionTitle}</h3>
-        <p styleName='questionContent'>{this.props.questionInfo.questionContent}</p>
+        {content.length < 30 || this.state.showAll ? (<p styleName='questionContent'>{content}</p>) : (<p styleName='questionContent'>{content.substring(0, 30)}......
+              <span onClick={this.showAll}>显示全部</span></p>)}
         <span styleName='questionAnswer'>{this.props.questionInfo.questionCreater}</span>
         <span styleName='questionTime'>{this.props.questionInfo.questionCreateTime}</span>
-        <span styleName='questionCount'>{this.props.questionInfo.questionAnswerCount}</span>
+        <span styleName='questionCount'>{this.props.questionInfo.questionAnswerCount}个回答</span>
       </div>
     )
   }
