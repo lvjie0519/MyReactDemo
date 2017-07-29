@@ -32,7 +32,7 @@ export default class QuestionDetail extends Component {
 
     return (
       <div>
-        <HeaderDetail centerText='问题详情' rightText='我来回答' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} />
+        <HeaderDetail centerText='问题详情' rightText='我来回答' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} headerStyle='header-container' />
         <div style={{ padding: '10px 30px' }} >
           <QuestionListItem questionInfo={this.questionInfo} onItemClick={this.onItemClick} showAll='true' />
           {answerInfos}

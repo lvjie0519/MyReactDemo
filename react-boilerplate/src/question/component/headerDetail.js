@@ -11,7 +11,7 @@ export default class HeaderDetail extends Component {
     leftText: React.PropTypes.string,
     centerText: React.PropTypes.string,
     rightText: React.PropTypes.string,
-    headerstyle: React.PropTypes.string,
+    headerStyle: React.PropTypes.string,
     leftClick: React.PropTypes.func,
     rightClick: React.PropTypes.func
   }
