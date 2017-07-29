@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import styles from '../theme/styles/publish.css'
 import CSSModules from 'react-css-modules'
 import HeaderDetail from './component/headerDetail'
+import Dialog from './component/dialog'
 
 @CSSModules(styles, {allowMultiple: true})
 export default class PublishQuestion extends Component {
@@ -15,7 +16,8 @@ export default class PublishQuestion extends Component {
     }
   }
   handleChange(e) {
-
+    // 对话框，提交按钮点击时出现
+    Dialog.show(1, '', '是否确认提交问题', 2000)
   }
   handleSubmit() {
 
@@ -23,7 +25,7 @@ export default class PublishQuestion extends Component {
   render() {
     return (
       <div>
-        <HeaderDetail centerText='发布问题' rightText='提问' />
+        <HeaderDetail centerText='发布问题' rightText='提问' headerstyle='header-container publish' />
         <form styleName='smart-publish'>
           <div>
             <span>标题：（50字以内的中文、英文或数字）</span>
