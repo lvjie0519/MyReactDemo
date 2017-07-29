@@ -32,7 +32,7 @@ export default class QuestionDetail extends Component {
 
     return (
       <div>
-        <HeaderDetail centerText='问题详情' rightText='提问' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} />
+        <HeaderDetail centerText='问题详情' rightText='我来回答' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} />
         <div style={{ padding: '10px 30px' }} >
           <QuestionListItem questionInfo={this.questionInfo} onItemClick={this.onItemClick} showAll='true' />
           {answerInfos}
@@ -42,13 +42,18 @@ export default class QuestionDetail extends Component {
   }
 
   headerLeftOnClick() {
-
+    console.log('点击返回')
+    this.context.router.goBack()
   }
 
   headerRightOnClick() {
-
+    console.log('我来回答')
   }
 
   onItemClick(questionInfo) {
   }
+}
+
+QuestionDetail.contextTypes = {
+  router: React.PropTypes.object
 }
