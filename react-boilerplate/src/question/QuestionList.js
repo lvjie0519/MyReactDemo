@@ -7,7 +7,7 @@ export default class QuestionMain extends Component {
   render() {
     return (
       <div>
-        <h2> 问题列表界面22 </h2>
+        <h2> 问题列表界面 </h2>
       </div>
     )
   }
