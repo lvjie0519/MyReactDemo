@@ -10,9 +10,7 @@ export default class QuestionMain extends Component {
   render() {
     return (
       <div>
-        <Header
-          leftText='答!'
-          rightText='提问' />
+        <Header leftText='答!' rightText='提问' />
         <QuestionList />
       </div>
     )
