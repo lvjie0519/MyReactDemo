@@ -31,7 +31,7 @@ export default class QuestionMainTop extends Component {
 
   render() {
     return (
-      <div styleName='container'>
+      <div styleName='header-container'>
         <button styleName='left-btn' onClick={(e) => {
           this.leftClick(e)
         }}>{this.props.leftText}</button>
