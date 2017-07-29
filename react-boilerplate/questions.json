@@ -22,6 +22,20 @@
         "answerUpCount":212,
         "answerDownCount":90,
         "answerContent":"回复问题22  回复问题22  回复问题22  回复问题22"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题33  回复问题33 回复问题33 回复问题33"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题44  回复问题44 回复问题44  回复问题44"
       }
     ]
   },
@@ -32,7 +46,38 @@
     "questionContent":"别人对玩游戏感兴趣，我对写代码、看技术文章感兴趣；把泡github、stackoverflow、v2ex、reddit、csdn当做是兴趣爱好；遇到重复的工作，总想着能不能通过程序实现自动化；喝酒的时候把写代码当下酒菜，边喝边想边敲；不给工资我也会来加班；做梦都在写代码。",
     "questionAnswerCount":1,
     "questionCreateTime":"2017-07-29",
-    "questionCreater":"陈晶晶"
+    "questionCreater":"陈晶晶",
+    "questionAnswerInfos":[
+      {
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":998,
+        "answerDownCount":2,
+        "answerContent":"回复问题11  回复问题11  回复问题11  回复问题11"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题22  回复问题22  回复问题22  回复问题22"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题33  回复问题33 回复问题33 回复问题33"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题44  回复问题44 回复问题44  回复问题44"
+      }
+    ]
   },
   {
     "questionId":2,
@@ -41,7 +86,38 @@
     "questionContent":"理性探讨，请勿撕逼。产品经理的主要工作职责是产品设计。接受来自其他部门的需求，经过设计后交付研发。但这里有好些职责不清楚的地方。",
     "questionAnswerCount":2,
     "questionCreateTime":"2017-07-29",
-    "questionCreater":"陈晶晶"
+    "questionCreater":"陈晶晶",
+    "questionAnswerInfos":[
+      {
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":998,
+        "answerDownCount":2,
+        "answerContent":"回复问题11  回复问题11  回复问题11  回复问题11"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题22  回复问题22  回复问题22  回复问题22"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题33  回复问题33 回复问题33 回复问题33"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题44  回复问题44 回复问题44  回复问题44"
+      }
+    ]
   },
   {
     "questionId":3,
@@ -50,7 +126,38 @@
     "questionContent":"别人对玩游戏感兴趣，我对写代码、看技术文章感兴趣；把泡github、stackoverflow、v2ex、reddit、csdn当做是兴趣爱好；遇到重复的工作，总想着能不能通过程序实现自动化；喝酒的时候把写代码当下酒菜，边喝边想边敲；不给工资我也会来加班；做梦都在写代码。",
     "questionAnswerCount":3,
     "questionCreateTime":"2017-07-29",
-    "questionCreater":"陈晶晶"
+    "questionCreater":"陈晶晶",
+    "questionAnswerInfos":[
+      {
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":998,
+        "answerDownCount":2,
+        "answerContent":"回复问题11  回复问题11  回复问题11  回复问题11"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题22  回复问题22  回复问题22  回复问题22"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题33  回复问题33 回复问题33 回复问题33"
+      },{
+        "questionId":0,
+        "answerCreater":"陈晶晶11",
+        "answerCreateTime": "2017-07-29",
+        "answerUpCount":212,
+        "answerDownCount":90,
+        "answerContent":"回复问题44  回复问题44 回复问题44  回复问题44"
+      }
+    ]
   },{
   "questionId":4,
   "questionType":0,
