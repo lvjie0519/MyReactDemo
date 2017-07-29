@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 import QuestionListItem from './component/QuestionListItem'
 
-export default class QuestionMain extends Component {
+export default class QuestionList extends Component {
   constructor(props) {
     super(props)
 
@@ -51,5 +51,15 @@ export default class QuestionMain extends Component {
 
   onItemClick(questionInfo) {
     console.log(questionInfo.questionTitle)
+    this.context.router.push({
+      pathname: '/question-detail',
+      state: {
+        questionInfo: questionInfo
+      }
+    })
   }
+}
+
+QuestionList.contextTypes = {
+  router: React.PropTypes.object
 }
