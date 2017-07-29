@@ -9,7 +9,8 @@ import styles from '../../theme/styles/questionItem.css'
 export default class QuestionListItem extends Component {
   static propTypes = {
     questionInfo: React.PropTypes.object,
-    onItemClick: React.PropTypes.func.isRequired
+    onItemClick: React.PropTypes.func.isRequired,
+    showAll: React.PropTypes.bool
   }
 
   static getDefaultProps = {
@@ -19,11 +20,14 @@ export default class QuestionListItem extends Component {
       questionCreater: '',
       questionCreateTime: '',
       questionAnswerCount: ''
-    }
+    },
+    showAll: false
   }
   constructor(props) {
     super(props)
-    this.state = {showAll: false}
+    this.state = {
+      showAll: this.props.showAll
+    }
   }
 
   showAll=() => {

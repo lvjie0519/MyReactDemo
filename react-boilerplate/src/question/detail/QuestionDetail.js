@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/7/29 0029.
  */
 import React, { Component } from 'react'
-import Header from '../component/headerDetail'
+import HeaderDetail from '../component/headerDetail'
 import QuestionListItem from '../component/QuestionListItem'
 import QuestionAnswerListItem from '../component/QuestionAnswerListItem'
 
@@ -32,16 +32,11 @@ export default class QuestionDetail extends Component {
 
     return (
       <div>
-        <Header
-          leftText='返回'
-          centerText='问题详情'
-          rightText='我来回答'
-          leftClick={this.headerLeftOnClick}
-          rightClick={this.headerRightOnClick} />
-        <QuestionListItem
-          questionInfo={this.questionInfo}
-          onItemClick={this.onItemClick} />
-        {answerInfos}
+        <HeaderDetail centerText='问题详情' rightText='我来回答' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} headerStyle='header-container' />
+        <div style={{ padding: '10px 30px' }} >
+          <QuestionListItem questionInfo={this.questionInfo} onItemClick={this.onItemClick} showAll='true' />
+          {answerInfos}
+        </div>
       </div>
     )
   }

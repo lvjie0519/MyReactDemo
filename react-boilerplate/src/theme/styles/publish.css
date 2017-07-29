@@ -2,7 +2,7 @@
     width: 100%;
     background: #F8F8F8;
     padding: 30px 30px 20px 30px;
-    font: 18px Arial, Helvetica, sans-serif;
+    font: 16px Arial, Helvetica, sans-serif;
     color: #666;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -13,6 +13,7 @@
 
 .smart-publish span {
     display: block;
+    margin-bottom: 5px;
 }
 
 .smart-publish input[type="text"], .smart-publish textarea {
