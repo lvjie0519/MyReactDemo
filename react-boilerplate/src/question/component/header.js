@@ -9,7 +9,8 @@ import styles from '../../theme/styles/header.css'
 export default class Header extends Component {
   static propTypes = {
     leftText: React.PropTypes.string,
-    rightText: React.PropTypes.string
+    rightText: React.PropTypes.string,
+    rightClick: React.PropTypes.func
   }
 
   static getDefaultProps = {
@@ -17,12 +18,16 @@ export default class Header extends Component {
     rightText: '提问'
   }
 
-  leftClick(e) {
-
-  }
+  // leftClick(e) {
+  //   if (this.props.leftClick != null) {
+  //     this.props.leftClick()
+  //   }
+  // }
 
   rightClick(e) {
-
+    if (this.props.rightClick != null) {
+      this.props.rightClick()
+    }
   }
 
   render() {

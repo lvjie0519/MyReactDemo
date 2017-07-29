@@ -16,6 +16,8 @@ export default class QuestionMain extends Component {
       isShowHomePage: true
     }
 
+    this.headerLeftOnClick = this.headerLeftOnClick.bind(this)
+    this.headerRightOnClick = this.headerRightOnClick.bind(this)
     this.homePageOnSelect = this.homePageOnSelect.bind(this)
     this.myQuestionPageOnSelect = this.myQuestionPageOnSelect.bind(this)
   }
@@ -25,7 +27,7 @@ export default class QuestionMain extends Component {
     // this.getSelectPage()
     return (
       <div>
-        <Header leftText='答!' rightText='提问' />
+        <Header leftText='答!' rightText='提问' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} />
         <HeaderDetail centerText='发布问题' rightText='提问' />
         <QuestionMainTop
           leftText='首页'
@@ -35,6 +37,18 @@ export default class QuestionMain extends Component {
         {selectPage}
       </div>
     )
+  }
+
+  headerLeftOnClick() {
+
+  }
+
+  headerRightOnClick() {
+    // 进入提问页面
+    console.log('进入提问页面')
+    this.context.router.push({
+      pathname: '/publish-question'
+    })
   }
 
   getSelectPage() {
@@ -58,4 +72,8 @@ export default class QuestionMain extends Component {
       isShowHomePage: false
     })
   }
+}
+
+QuestionMain.contextTypes = {
+  router: React.PropTypes.object
 }
