@@ -40,7 +40,8 @@ export default class QuestionListItem extends Component {
     if (dateString) {
       let arr1 = dateString.split(' ')
       let sdate = arr1[0].split('-')
-      let date = new Date(sdate[0], sdate[1] - 1, sdate[2])
+      let sTime = arr1[1].split(':')
+      let date = new Date(sdate[0], sdate[1] - 1, sdate[2], sTime[0], sTime[1])
       return date
     }
   }
