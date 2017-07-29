@@ -33,7 +33,9 @@ export default class PublishQuestion extends Component {
             <span>描述：（200字以内）</span>
             <textarea id='description' name='description' rows='30' placeholder='请输入问题描述' onChange={this.handleChange} />
           </div>
-          <span styleName='btn smart-btn-submit'>提交</span><span styleName='btn'>取消</span>
+          <div styleName='btn-wrapper'>
+            <span styleName='btn smart-btn-submit'>提交</span><span styleName='btn'>取消</span>
+          </div>
         </form>
       </div>
     )

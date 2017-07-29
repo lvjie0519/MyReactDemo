@@ -64,3 +64,15 @@
     background-color: #1872f9;
     margin-right: 30px;
 }
+
+.btn-wrapper {
+    text-align: left;
+    display: none;
+}
+
+@media only screen and (min-width:1000px){
+    .btn-wrapper {
+        text-align: left;
+        display: block;
+    }
+}

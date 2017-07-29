@@ -23,6 +23,7 @@
     "axios": "^0.16.1",
     "es6-promise": "^4.1.0",
     "intl": "1.1.0",
+    "jquery": "^3.2.1",
     "object-assign": "^4.1.1",
     "react": "0.14.8",
     "react-css-modules": "3.6.1",
