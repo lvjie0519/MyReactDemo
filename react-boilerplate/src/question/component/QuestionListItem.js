@@ -2,7 +2,10 @@
  * Created by Administrator on 2017/7/29 0029.
  */
 import React, {Component} from 'react'
+import CSSModules from 'react-css-modules'
+import styles from '../../theme/styles/questionItem.css'
 
+@CSSModules(styles, {allowMultiple: true})
 export default class QuestionListItem extends Component {
   static propTypes = {
     questionInfo: React.PropTypes.object,
@@ -21,14 +24,12 @@ export default class QuestionListItem extends Component {
 
   render() {
     return (
-      <div onClick={(e) => {
-        this.onItemClick(e)
-      }}>
-        <h3>{this.props.questionInfo.questionTitle}</h3>
-        <p>{this.props.questionInfo.questionContent}</p>
-        <h3>{this.props.questionInfo.questionCreater}</h3>
-        <h3>{this.props.questionInfo.questionCreateTime}</h3>
-        <h3>{this.props.questionInfo.questionAnswerCount}</h3>
+      <div onClick={(e) => { this.onItemClick(e) }} styleName='questionItem' >
+        <h3 styleName='questionTitle' >{this.props.questionInfo.questionTitle}</h3>
+        <p styleName='questionContent'>{this.props.questionInfo.questionContent}</p>
+        <span styleName='questionAnswer'>{this.props.questionInfo.questionCreater}</span>
+        <span styleName='questionTime'>{this.props.questionInfo.questionCreateTime}</span>
+        <span styleName='questionCount'>{this.props.questionInfo.questionAnswerCount}</span>
       </div>
     )
   }

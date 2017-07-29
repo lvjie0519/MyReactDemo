@@ -5,7 +5,6 @@
 import React, { Component } from 'react'
 import QuestionList from './QuestionList'
 import Header from './component/header'
-import HeaderDetail from './component/headerDetail'
 import QuestionMainTop from './component/QuestionMainTop'
 import MyQuestionList from './MyQuestionList'
 
@@ -28,7 +27,6 @@ export default class QuestionMain extends Component {
     return (
       <div>
         <Header leftText='答!' rightText='提问' leftClick={this.headerLeftOnClick} rightClick={this.headerRightOnClick} />
-        <HeaderDetail centerText='发布问题' rightText='提问' />
         <QuestionMainTop
           leftText='首页'
           rightText='我的提问'
