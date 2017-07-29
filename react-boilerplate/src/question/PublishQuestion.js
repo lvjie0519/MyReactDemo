@@ -25,7 +25,7 @@ export default class PublishQuestion extends Component {
   render() {
     return (
       <div>
-        <HeaderDetail centerText='发布问题' rightText='提问' headerstyle='header-container publish' />
+        <HeaderDetail centerText='发布问题' rightText='提问' headerStyle='header-container publish' />
         <form styleName='smart-publish'>
           <div>
             <span>标题：（50字以内的中文、英文或数字）</span>
