@@ -25,7 +25,7 @@ export default class QuestionMain extends Component {
           onItemClick={this.onItemClick} />
       }.bind(this))
       return (
-        <div>
+        <div style={{padding: 20}}>
           {questionInfos}
         </div>
       )
