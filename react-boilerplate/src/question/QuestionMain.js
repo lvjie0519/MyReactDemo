@@ -4,7 +4,8 @@
 
 import React, { Component } from 'react'
 import QuestionList from './QuestionList'
-import Header from './component/Header'
+import Header from './component/header'
+import HeaderDetail from './component/headerDetail'
 import QuestionMainTop from './component/QuestionMainTop'
 import MyQuestionList from './MyQuestionList'
 
@@ -24,9 +25,8 @@ export default class QuestionMain extends Component {
     // this.getSelectPage()
     return (
       <div>
-        <Header
-          leftText='答!'
-          rightText='提问' />
+        <Header leftText='答!' rightText='提问' />
+        <HeaderDetail centerText='发布问题' rightText='提问' />
         <QuestionMainTop
           leftText='首页'
           rightText='我的提问'

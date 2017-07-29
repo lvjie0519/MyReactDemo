@@ -6,15 +6,17 @@ import CSSModules from 'react-css-modules'
 import styles from '../../theme/styles/header.css'
 
 @CSSModules(styles, {allowMultiple: true})
-export default class Header extends Component {
+export default class HeaderDetail extends Component {
   static propTypes = {
     leftText: React.PropTypes.string,
+    centerText: React.PropTypes.string,
     rightText: React.PropTypes.string
   }
 
   static getDefaultProps = {
-    leftText: '答！',
-    rightText: '提问'
+    leftText: '',
+    centerText: '发布问题',
+    rightText: '提交'
   }
 
   leftClick(e) {
@@ -28,7 +30,10 @@ export default class Header extends Component {
   render() {
     return (
       <div styleName='header-container'>
-        <span styleName='left-text'>{this.props.leftText}</span>
+        <a styleName='left-btn' onClick={(e) => {
+          this.leftClick(e)
+        }}>{this.props.leftText}</a>
+        <span styleName='center-text'>{this.props.centerText}</span>
         <button styleName='right-btn' onClick={(e) => {
           this.rightClick(e)
         }}>{this.props.rightText}</button>
