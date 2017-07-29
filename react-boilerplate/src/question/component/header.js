@@ -2,9 +2,10 @@
  * Created by Administrator on 2017/7/29 0029.
  */
 import React, { Component } from 'react'
-import '../../theme/styles/header.css'
+import CSSModules from 'react-css-modules'
+import styles from '../../theme/styles/header.css'
 
-// 头部
+@CSSModules(styles, {allowMultiple: true})
 export default class Header extends Component {
   static propTypes = {
     leftText: React.PropTypes.string,
@@ -28,12 +29,12 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <button className='left-btn' onClick={(e) => {
+      <div styleName='container'>
+        <button styleName='left-btn' onClick={(e) => {
           this.leftClick(e)
         }}>{this.props.leftText}</button>
         <span>{this.props.centerText}</span>
-        <button className='right-btn' onClick={(e) => {
+        <button styleName='right-btn' onClick={(e) => {
           this.rightClick(e)
         }}>{this.props.rightText}</button>
       </div>

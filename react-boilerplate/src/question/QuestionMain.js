@@ -11,7 +11,7 @@ export default class QuestionMain extends Component {
     return (
       <div>
         <Header
-          leftText='答'
+          leftText='答!'
           rightText='提问' />
         <QuestionList />
       </div>
